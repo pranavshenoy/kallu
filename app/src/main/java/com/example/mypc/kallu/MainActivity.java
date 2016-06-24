@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, list.class);
-                i.putExtra("list",list_1);
-                i.putExtra("section",1);
+                i.putExtra("list", list_1);
+                i.putExtra("section", 1);
                 startActivity(i);
             }
         });
@@ -117,7 +117,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        Button button4= (Button) findViewById(R.id.part4);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,list.class);
+                i.putExtra("section",4);
+                startActivity(i);
+            }
+        });
     }
 
     @Override

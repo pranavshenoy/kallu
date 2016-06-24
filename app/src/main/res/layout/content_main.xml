@@ -29,4 +29,12 @@
         android:text="Part 3"
         android:layout_below="@id/part2"
         android:theme="@style/MyButton"/>
+    <Button
+        android:id="@+id/part4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Photo Gallery"
+        android:layout_below="@id/part3"
+        android:theme="@style/MyButton"/>
+
 </RelativeLayout>

@@ -24,18 +24,20 @@ public class list extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ArrayList<heading> lists = (ArrayList<heading>) getIntent().getSerializableExtra("list");
         section=getIntent().getIntExtra("section", 0);
         CopyReadAssets(100 + section);
-        Log.e("section", section+"");
-        display_list = (ListView) findViewById(R.id.left_drawer);
-        display_list.setAdapter(new customAdapter(this, R.layout.draw_list_item, lists));
-        display_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                CopyReadAssets(position);
-            }
-        });
+        if(section == 1 || section == 2 || section == 3){
+            ArrayList<heading> lists = (ArrayList<heading>) getIntent().getSerializableExtra("list");
+            Log.e("section", section+"");
+            display_list = (ListView) findViewById(R.id.left_drawer);
+            display_list.setAdapter(new customAdapter(this, R.layout.draw_list_item, lists));
+            display_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    CopyReadAssets(position);
+                }
+            });
+        }
     }
 
     private void CopyReadAssets(int position) {
