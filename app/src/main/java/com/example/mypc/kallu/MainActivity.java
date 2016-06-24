@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         list_3.add(new heading("#loveWins ","Rex Mathew"));
         list_3.add(new heading("College Union Report",""));
 
+        new reader(getApplicationContext()).CopyReadAssets(0,0);//displays introduction in folder 0 name->0.pdf
+
         Button button1= (Button) findViewById(R.id.part1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
