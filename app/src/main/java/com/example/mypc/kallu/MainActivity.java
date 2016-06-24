@@ -2,16 +2,12 @@ package com.example.mypc.kallu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -122,12 +118,8 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* list temp=new list();
-                temp.CopyReadAssets(104);
-                Log.e("104","sectio 4");*/
-                Intent i = new Intent(MainActivity.this,list.class);
-                i.putExtra("section",4);
-                startActivity(i);
+                reader temp=new reader(getApplicationContext());
+                temp.CopyReadAssets(104,4);
             }
         });
     }

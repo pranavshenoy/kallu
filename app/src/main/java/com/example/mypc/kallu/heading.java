@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import java.io.Serializable;
 
 /**
- * Created by My Pc on 22-06-2016.
+ * Created by PRANAV SHENOY on 22-06-2016.
  */
 public class heading implements Serializable {
     private String title;

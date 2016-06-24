@@ -2,18 +2,16 @@ package com.example.mypc.kallu;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 /**
- * Created by My Pc on 22-06-2016.
+ * Created by PRANAV SHENOY on 22-06-2016.
  */
 public class customAdapter extends ArrayAdapter {
     private int resource;
@@ -38,10 +36,8 @@ public class customAdapter extends ArrayAdapter {
             head= (TextView) convertView.findViewById(R.id.head);
             writer= (TextView) convertView.findViewById(R.id.author);
         heading t=list_array.get(position);
-        Log.e("hi", convertView.toString());
         head.setText(t.getTitle());
         writer.setText("-"+t.getAuthor());
         return convertView;
     }
-
 }
