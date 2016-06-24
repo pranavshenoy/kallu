@@ -40,9 +40,8 @@ public class list extends AppCompatActivity {
         }
     }
 
-    private void CopyReadAssets(int position) {
+    public void CopyReadAssets(int position) {
         AssetManager assetManager = getAssets();
-
         InputStream in = null;
         OutputStream out = null;
         File file = new File(getFilesDir(), position + ".pdf");
